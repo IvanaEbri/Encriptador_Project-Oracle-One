@@ -1,0 +1,364 @@
+*{
+    /* colores */
+    --azul:#0F4698;
+    --gris-oscuro:#444655;
+    --gris-claro:#A8AABC;
+    --petroleo:#005F74;
+    --hueso:#F1F1E6;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* pagina en gral */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100%;
+}
+
+/* centrado */
+header, main, footer {
+    width: 100%;
+    max-width: 1200; 
+    text-align: center; 
+    margin: 20px 0; 
+  }
+
+/* titulo pag */
+header{
+    /* line-height: 200%; */
+    padding-top: 1vh;
+    height: 9vh;
+}
+
+h1{
+    font-size: 6vh;
+    color: var(--azul);
+    text-shadow:  0px 5px 15px rgba(68, 70, 85, 0.45);
+}
+
+h3{
+    font-style: italic;
+    font-weight: 400;
+    margin: 0.5%;
+    font-size: 3vh;
+}
+
+main{
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-evenly;
+    height: 55vh;
+}
+
+.tarjeta{
+    box-shadow: rgba(68, 70, 85, 0.35) 0px 5px 15px;
+    padding: 2%;
+    border-radius: 25px
+}
+
+.ingresoA{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+textarea{
+    width: 90%;
+    height: 100%;
+    border: none;
+    resize: none;
+    box-sizing: border-box;
+}
+
+
+#botones{
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#resultado{
+    width:25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.resultado, textarea{
+    width: 90%;
+}
+
+button{
+    min-width: 160px;
+    height: 30px;
+    border-radius: 15px;
+    /* margin: 0 0.01%; */
+    font-weight: 900;
+    text-transform: uppercase;
+    border: none;
+    background-color: var(--azul);
+    color:var(--hueso);
+    align-items: center;
+    justify-content: center;
+}
+
+button:hover{
+    background-color: var(--petroleo);
+    color: #ffffff;
+    cursor: pointer;
+}
+
+footer{
+    background-color: var(--gris-claro);
+    height: 18%;
+    margin-bottom: 0;
+    background-image: linear-gradient(to bottom,  #747687, #8e90a1, #a8aabc);
+    text-align: center;
+    padding-top: 2vh;
+    position: absolute;
+    bottom: 0;
+}
+
+h4{
+    font-size: 3vh;
+    color: var(--hueso);
+}
+
+a{
+    text-decoration: none;
+    list-style: none;
+    color:var(--azul);
+}
+
+i{
+    margin: 4px;
+}
+
+/* boton copiar */
+.copiar{
+    visibility: hidden;
+}
+
+/* tablet viewport */
+@media screen and (max-width:980px){
+    *{
+        overflow: auto;
+        height: 100%;
+    }
+
+    body{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    header, main, footer {
+        position: relative;
+    }
+    
+    header{
+        padding-top: 0.4vw;
+        height: 15%;
+        background-color: transparent;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    h1{
+        font-size: 3.5vw;
+        margin-bottom: 0;
+    }
+    
+    h3{
+        margin: 0;
+        font-size: 1.8vw;
+        background-color: transparent;
+    }
+
+    main{
+        height: auto;
+        position: relative;
+        margin-bottom: 2%;
+        height: fit-content;
+        padding: 2%;
+    }
+
+    #botones{
+        height: 25%;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .tarjeta{
+        height: 90%;
+    }
+
+    textarea, .resultado, .copiado{
+        font-size: 2vw;
+    }
+
+    button{
+        flex-direction: row;
+        font-size: 16px;
+        margin-top: 2px;
+        overflow: hidden;
+        text-align: center;
+    } 
+    
+    #resultado{
+        justify-content: space-around;
+    }
+
+    i{
+        padding: 0;
+        margin: 0;
+    }
+
+    #botonCopiar b{
+        font-size: 15px;
+        justify-content: center;
+        margin-left: 2px;
+    }
+    
+    #botonCopiar button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    #botonCopiar button i{
+        line-height: 15px;
+    }
+
+    .resultado{
+        height:100%;
+    }
+    
+    footer{
+        position: relative;    
+        height: 15%;
+        padding: 0;  
+        width: 100%; 
+        text-align: center; 
+        display: flex;
+        flex-direction: column;
+    }
+    footer h4 {
+        margin-top: 10px;
+    }
+      
+    footer ul {
+        margin-top: 10px;
+        padding: 0;
+        overflow: hidden;
+    }
+      
+    footer ul li {
+        display: inline-block;
+        margin-right: 10px;
+    }
+
+    footer ul li a {
+        display: flex;
+        align-items: center; 
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    footer ul li a i {
+        margin-left:10px;
+        margin-right: 6px;
+        line-height: auto;
+    }
+}
+
+
+@media screen and (max-width:600px){
+    
+    body{
+        align-items: start;
+        width: 100%;
+        overflow-y: scroll;
+        /* overflow: scroll; */
+        
+    }
+
+    h1{
+        font-size: 120%;
+    }
+
+    h3{
+        font-size: 80%;
+    }
+    
+    main{
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        height: 80%;
+        margin-right: 0;
+    }
+    
+    .tarjeta, #resultado{
+        width: 90%;
+        
+    }
+
+    .tarjeta{
+        height: 65%;
+        margin-right: 15px;
+    }
+    
+    .ingresoA{
+        width: 90%;
+        padding: 0;
+    }
+    
+    textarea{
+        width: 80%;
+    }
+
+    #resultado{
+        height: 25%;
+        padding: 0;
+        margin: 2.5% 0;
+        margin-right: 15px;
+    }
+
+    footer{
+        position: relative;
+        height: 30%;
+    }
+
+    h4{
+        margin-bottom: 0;
+    }
+
+    ul{
+        display: flex;
+        flex-direction: column;
+        margin-top: 0;
+        justify-content: flex-start;
+    }
+    
+    li{
+       margin-top: 2px; 
+    }
+}
